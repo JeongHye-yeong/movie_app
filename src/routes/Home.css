@@ -1,0 +1,31 @@
+/* Home.css */
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.loader{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+}
+.movies{
+    display: grid;/*position,float,display: flex와 같은 정렬 속성*/
+    grid-template-columns: repeat(2,minmax(400px, 1fr));
+    /* fr: frctional unit 사용가능한 공간에 대한 비율*/
+    grid-gap: 100px;/*사이 간격*/
+    padding: 50px;
+    width: 80%;/*%계산은 자식/부모*100 = % 부모는 무조건 기준이 되고 무조건 100%임*/
+    padding-top: 70px;
+}
+
+@media screen and (max-width: 768px) {/*모바일 크기 0~768*/
+    .movies{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
